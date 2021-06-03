@@ -7,31 +7,12 @@ import styles from '../styles/ManipulandoStyles';
 
 // create a component
 class Home extends Component {
-    static navigationOptions = {
-        drawerLabel: "Home",
-
-        // drawerIcon: ({ focused, tintColor }) => (
-        //     //define style 
-        //     <Image
-        //         style={styles.logo}
-        //         style={{ width: 40, height: 40 }}
-        //         source={require('../image/home.png')}
-        //     />
-
-        // )
-    }
-
     render() {
-        const { navigation } = this.props;
-        const nameUser = navigation.getParam('nome');
-        const lastNameUser = navigation.getParam('sobrenome');
-        const completeName = nameUser + " " + lastNameUser;
-
         return (
             <View style={styles.container}>
                 <Text style={styles.tag}>Imunizado</Text>
                 <Image source={require('../image/QRCode.png')} style={styles.qrCode} />
-                <Title style={styles.texto1}><Image source={require('../image/avatar.png')} style={styles.iconeAvatar} /> Pedro Freitas</Title>
+                <Title style={styles.texto1}><Image source={require('../image/avatar.png')} style={styles.iconeAvatar} /> Fulano</Title>
 
                 <List.Accordion title="1ª Dose" id="1" style={styles.list}>
                     <List.Item

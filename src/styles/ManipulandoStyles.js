@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   button: {
     width: 300,
     height: 42,
-    backgroundColor: '#292f76',
+    backgroundColor: '#02c698',
     marginTop: 10,
     borderRadius: 5,
     alignItems: 'center',
@@ -114,6 +114,8 @@ const styles = StyleSheet.create({
   tag: {
     width: 150,
     height: 30,
+    borderWidth: 1,
+    borderColor: "#2ea68a",
     backgroundColor: '#02c698',
     borderRadius: 15,
     fontSize: 20,
