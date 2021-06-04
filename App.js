@@ -41,15 +41,15 @@ function MyTabs() {
       <Tab.Screen name="Home" component={Home} options={() => ({
         tabBarIcon: () => (
           <Image
-            source={require('./src/image/home.png')}
-            style={{ height: 20, width: 20 }}
+            source={require('./src/image/homeIcon.png')}
+            style={{ height: 25, width: 25 }}
           />
         )
       })} />
       <Tab.Screen name="Perfil" component={Perfil} options={() => ({
         tabBarIcon: () => (
           <Image
-            source={require('./src/image/perfil.png')}
+            source={require('./src/image/profile.png')}
             style={{ height: 25, width: 25 }}
           />
         )
@@ -57,8 +57,8 @@ function MyTabs() {
       <Tab.Screen name="Evento" component={Evento} options={() => ({
         tabBarIcon: () => (
           <Image
-            source={require('./src/image/evento.png')}
-            style={{ height: 30, width: 20 }}
+            source={require('./src/image/event.png')}
+            style={{ height: 30, width: 23 }}
           />
         )
       })} />
