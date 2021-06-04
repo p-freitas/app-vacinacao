@@ -3,6 +3,7 @@ import { createAppContainer } from 'react-navigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import React, { Component } from 'react';
+import { Image } from 'react-native';
 
 import Login from './src/components/Login';
 import Cadastro from './src/components/Cadastro';
@@ -20,9 +21,27 @@ class App extends Component {
     return (
       <NavigationContainer>
         <Drawer.Navigator initialRouteName="Home">
-          <Drawer.Screen name="Home" component={Home} />
-          <Drawer.Screen name="Perfil" component={Perfil} />
-          <Drawer.Screen name="Evento" component={Evento} />
+          <Drawer.Screen name="Home" component={Home} options={{
+            drawerIcon: () => (
+              <Image
+                source={require('./src/image/home.png')}
+                style={{ height: 30, width: 30 }}
+              />)
+          }} />
+          <Drawer.Screen name="Perfil" component={Perfil} options={{
+            drawerIcon: () => (
+              <Image
+                source={require('./src/image/perfil.png')}
+                style={{ height: 30, width: 30 }}
+              />)
+          }} />
+          <Drawer.Screen name="Evento" component={Evento} options={{
+            drawerIcon: () => (
+              <Image
+                source={require('./src/image/evento.png')}
+                style={{ height: 40, width: 30 }}
+              />)
+          }} />
           <Drawer.Screen name="Login" component={Login} options={{ drawerLabel: () => null }} />
           <Drawer.Screen name="Cadastro" component={Cadastro} options={{ drawerLabel: () => null }} />
           <Drawer.Screen name="EsqueceuSenha" component={EsqueceuSenha} options={{ drawerLabel: () => null }} />

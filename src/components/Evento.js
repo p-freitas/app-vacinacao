@@ -17,7 +17,7 @@ export default function Evento() {
         <Marker
           coordinate={{ latitude: -12.9789048, longitude: -38.5052671 }}
           title="Brasil x Argentina"
-          description="Arena Fonte Nova"
+          description="Arena Fonte Nova (14h ~ 16h)"
         />
       </MapView>
 
