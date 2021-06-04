@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
   },
   map: {
     width: Dimensions.get('window').width,
-    height: (Dimensions.get('window').height) - 70,
+    height: (Dimensions.get('window').height) - 150,
   },
   titulo: {
-    fontSize: 42,
+    fontSize: 40,
     color: "white",
     textAlign: "center",
-    marginTop: 20
+    marginTop: 50
   },
 });

@@ -4,6 +4,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { List, Divider, Title } from 'react-native-paper';
 
 import styles from '../styles/ManipulandoStyles';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // create a component
 class Home extends Component {

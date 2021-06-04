@@ -1,9 +1,7 @@
-//import liraries
-import { createAppContainer } from 'react-navigation';
+import * as React from 'react';
+import { Text, View, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Login from './src/components/Login';
 import Cadastro from './src/components/Cadastro';
@@ -14,71 +12,85 @@ import EsqueceuSenha from './src/components/EsqueceuSenha';
 import Cadastrado from './src/components/Cadastrado';
 import SenhaAlterada from './src/components/SenhaAlterada';
 
-const Drawer = createDrawerNavigator();
-
-class App extends Component {
-  render() {
-    return (
-      <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Home">
-          <Drawer.Screen name="Home" component={Home} options={{
-            drawerIcon: () => (
-              <Image
-                source={require('./src/image/home.png')}
-                style={{ height: 30, width: 30 }}
-              />)
-          }} />
-          <Drawer.Screen name="Perfil" component={Perfil} options={{
-            drawerIcon: () => (
-              <Image
-                source={require('./src/image/perfil.png')}
-                style={{ height: 30, width: 30 }}
-              />)
-          }} />
-          <Drawer.Screen name="Evento" component={Evento} options={{
-            drawerIcon: () => (
-              <Image
-                source={require('./src/image/evento.png')}
-                style={{ height: 40, width: 30 }}
-              />)
-          }} />
-          <Drawer.Screen name="Login" component={Login} options={{ drawerLabel: () => null }} />
-          <Drawer.Screen name="Cadastro" component={Cadastro} options={{ drawerLabel: () => null }} />
-          <Drawer.Screen name="EsqueceuSenha" component={EsqueceuSenha} options={{ drawerLabel: () => null }} />
-          <Drawer.Screen name="Cadastrado" component={Cadastrado} options={{ drawerLabel: () => null }} />
-          <Drawer.Screen name="SenhaAlterada" component={SenhaAlterada} options={{ drawerLabel: () => null }} />
-        </Drawer.Navigator>
-      </NavigationContainer>
-    )
-  }
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
 }
 
+const Tab = createBottomTabNavigator();
 
-// const MainDrawer = createDrawerNavigator(
-//   {
-//     Home: Home,
-//     Perfil: Perfil,
-//     Login: Login,
-//     Cadastro: Cadastro,
-//     EsqueceuSenha: EsqueceuSenha,
-//   },
-//   {
-//     //Prop 
-//     contentOptions: {
-//       //Sempre que a aba estiver ativa, manter essa cor
-//       activeTintColor: `#800000`,
-//       //Prop
-//       //Permite aumentar a fonte 
-//       labelStyle: {
-//         fontSize: 18
-//       }
-//     }
-//   }
-// )
+function MyTabs() {
+  return (
+    <Tab.Navigator tabBarOptions={{
+      activeTintColor: 'black',
+      inactiveTintColor: 'white',
+      tabBarOptions: {
+        showIcon: true
+      },
+      labelStyle: {
+        fontSize: 12
+      },
+      tabStyle: {
+        backgroundColor: '#4cb3fc'
+      }
+    }}
+    >
+      <Tab.Screen name="Home" component={Home} options={() => ({
+        tabBarIcon: () => (
+          <Image
+            source={require('./src/image/home.png')}
+            style={{ height: 20, width: 20 }}
+          />
+        )
+      })} />
+      <Tab.Screen name="Perfil" component={Perfil} options={() => ({
+        tabBarIcon: () => (
+          <Image
+            source={require('./src/image/perfil.png')}
+            style={{ height: 25, width: 25 }}
+          />
+        )
+      })} />
+      <Tab.Screen name="Evento" component={Evento} options={() => ({
+        tabBarIcon: () => (
+          <Image
+            source={require('./src/image/evento.png')}
+            style={{ height: 30, width: 20 }}
+          />
+        )
+      })} />
+      <Tab.Screen name="Login" component={Login} options={() => ({
+        tabBarVisible: false,
+        tabBarButton: () => null,
+      })} />
+      <Tab.Screen name="Cadastro" component={Cadastro} options={() => ({
+        tabBarVisible: false,
+        tabBarButton: () => null,
+      })} />
+      <Tab.Screen name="EsqueceuSenha" component={EsqueceuSenha} options={() => ({
+        tabBarVisible: false,
+        tabBarButton: () => null,
+      })} />
+      <Tab.Screen name="Cadastrado" component={Cadastrado} options={() => ({
+        tabBarVisible: false,
+        tabBarButton: () => null,
+      })} />
+      <Tab.Screen name="SenhaAlterada" component={SenhaAlterada} options={() => ({
+        tabBarVisible: false,
+        tabBarButton: () => null,
+      })}
+      />
+    </Tab.Navigator>
+  );
+}
 
-export default App;
-
-
-
-
-
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
+  );
+}
