@@ -20,7 +20,7 @@ class EsqueceuSenha extends Component {
         <TextInput style={styles.input} placeholder="Digite sua senha" secureTextEntry={true} />
         <TextInput style={styles.input} placeholder="Digite sua senha novamente" secureTextEntry={true} />
         <TouchableOpacity
-          style={styles.button} onPress={() => { this.props.navigation.navigate('Login', { 'email': this.state.email }) }}>
+          style={styles.button} onPress={() => { this.props.navigation.navigate('SenhaAlterada') }}>
           <Text style={styles.buttonText}>Trocar Senha</Text>
         </TouchableOpacity>
         <TouchableOpacity

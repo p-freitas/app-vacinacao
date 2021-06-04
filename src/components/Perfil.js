@@ -16,7 +16,7 @@ class Perfil extends Component {
         <TextInput style={styles.input} editable={false} value="154.654.987-09" placeholder="" />
         <TextInput style={styles.input} editable={false} value="fulano@gmail.com" placeholder="" />
         <TextInput style={styles.input} editable={false} value="Rua Parambu 59" placeholder="" />
-        <TextInput style={styles.input} editable={false} value="Salvador" placeholder="" />
+        <TextInput style={styles.input} editable={false} value="Salvador - BA" placeholder="" />
         <TouchableOpacity
           style={styles.text} onPress={() => { this.props.navigation.navigate('Home') }}>
           <Text style={styles.text}>Voltar para a Home</Text>

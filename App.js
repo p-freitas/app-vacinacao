@@ -10,6 +10,8 @@ import Home from './src/components/Home';
 import Perfil from './src/components/Perfil';
 import Evento from './src/components/Evento';
 import EsqueceuSenha from './src/components/EsqueceuSenha';
+import Cadastrado from './src/components/Cadastrado';
+import SenhaAlterada from './src/components/SenhaAlterada';
 
 const Drawer = createDrawerNavigator();
 
@@ -24,6 +26,8 @@ class App extends Component {
           <Drawer.Screen name="Login" component={Login} options={{ drawerLabel: () => null }} />
           <Drawer.Screen name="Cadastro" component={Cadastro} options={{ drawerLabel: () => null }} />
           <Drawer.Screen name="EsqueceuSenha" component={EsqueceuSenha} options={{ drawerLabel: () => null }} />
+          <Drawer.Screen name="Cadastrado" component={Cadastrado} options={{ drawerLabel: () => null }} />
+          <Drawer.Screen name="SenhaAlterada" component={SenhaAlterada} options={{ drawerLabel: () => null }} />
         </Drawer.Navigator>
       </NavigationContainer>
     )

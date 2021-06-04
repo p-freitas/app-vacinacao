@@ -7,6 +7,7 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 export default function Evento() {
   return (
     <View style={styles.container}>
+      <Text style={styles.titulo}>Evento</Text>
       <MapView style={styles.map} initialRegion={{
         latitude: -12.9789048,
         longitude: -38.5052671,
@@ -27,12 +28,18 @@ export default function Evento() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#64bfff',
+    alignItems: 'stretch',
     justifyContent: 'center',
   },
   map: {
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    height: (Dimensions.get('window').height) - 70,
+  },
+  titulo: {
+    fontSize: 42,
+    color: "white",
+    textAlign: "center",
+    marginTop: 20
   },
 });

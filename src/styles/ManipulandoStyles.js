@@ -18,8 +18,9 @@ const styles = StyleSheet.create({
   },
   texto2: {
     color: '#fffaf0',
-    fontSize: 16,
-    padding: 30
+    fontSize: 24,
+    padding: 30,
+    textAlign: 'center',
   },
   texto3: {
     color: '#f0ffff',
@@ -59,6 +60,11 @@ const styles = StyleSheet.create({
   qrCode: {
     width: 250,
     height: 250,
+  },
+
+  success: {
+    width: 150,
+    height: 150,
   },
 
   input: {
@@ -123,7 +129,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 15
   }
-
 });
 
 //make this component available to the app

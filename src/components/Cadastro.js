@@ -23,7 +23,7 @@ class Cadastro extends Component {
         <TextInput style={styles.input} placeholder="Digite sua senha" secureTextEntry={true} />
         <TextInput style={styles.input} placeholder="Digite sua senha novamente" secureTextEntry={true} />
         <TouchableOpacity
-          style={styles.button} onPress={() => { this.props.navigation.navigate('Home', { 'nome': this.state.nome, 'sobrenome': this.state.sobrenome }) }}>
+          style={styles.button} onPress={() => { this.props.navigation.navigate('Cadastrado', { 'nome': this.state.nome }) }}>
           <Text style={styles.buttonText}>Cadastrar</Text>
         </TouchableOpacity>
         <TouchableOpacity
