@@ -11,7 +11,7 @@ class SenhaAlterada extends Component {
     return (
       <View style={styles.container}>
         <Image source={require('../image/success.png')} style={styles.success} />
-        <Text style={styles.texto2}>Senha alterada com sucesso! Volte para a tela de Login para continuar</Text>
+        <Text style={styles.texto2}>Senha alterada com sucesso! Volte para a tela de login para continuar</Text>
         <TouchableOpacity
           style={styles.text} onPress={() => { this.props.navigation.navigate('Login') }}>
           <Text style={styles.text}>Voltar para o Login</Text>

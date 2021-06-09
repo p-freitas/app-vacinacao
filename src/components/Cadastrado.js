@@ -11,7 +11,7 @@ class Cadastrado extends Component {
     return (
       <View style={styles.container}>
         <Image source={require('../image/success.png')} style={styles.success} />
-        <Text style={styles.texto2}>Bem-Vindo! Seu cadastrado foi concluído com sucesso.</Text>
+        <Text style={styles.texto2}>Bem-Vindo! Seu cadastro foi concluído com sucesso.</Text>
         <Text style={styles.texto2}>Você receberá um e-mail solicitando as informações da sua vacinação em breve.</Text>
         <TouchableOpacity
           style={styles.text} onPress={() => { this.props.navigation.navigate('Login') }}>

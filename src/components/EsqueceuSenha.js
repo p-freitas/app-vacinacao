@@ -1,6 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { Text, View, Image, TextInput, TouchableOpacity, Alert } from 'react-native';
+import { TextInputMask } from 'react-native-masked-text'
 
 import styles from '../styles/ManipulandoStyles';
 
@@ -16,7 +17,17 @@ class EsqueceuSenha extends Component {
       <View style={styles.container}>
         <Image source={require('../image/logopng.png')} style={styles.logo} />
         <Text style={styles.titulo}>Alterar Senha</Text>
-        <TextInput style={styles.input} onChangeText={text => this.state.email = text} placeholder="Informe seu CPF" />
+        <TextInputMask
+          style={styles.input}
+          placeholder="Informe seu CPF"
+          type={'cpf'}
+          value={this.state.cpf}
+          onChangeText={text => {
+            this.setState({
+              cpf: text
+            })
+          }}
+        />
         <TextInput style={styles.input} placeholder="Digite sua senha" secureTextEntry={true} />
         <TextInput style={styles.input} placeholder="Digite sua senha novamente" secureTextEntry={true} />
         <TouchableOpacity
